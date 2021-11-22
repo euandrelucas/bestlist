@@ -13,7 +13,12 @@ class BestListWrapper {
     token: any;
     async setToken(token: string) {
         this.token = token;
-        return true
+        res = axios.get('https://bestlist.online/api/bots/')
+        if(res.status != 200) {
+          throw new Error('[INVALID_TOKEN], Token is invalid')
+        }else{
+         return true
+       }
     }
     /**
     * Get a botlist bot.
