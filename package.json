@@ -1,6 +1,6 @@
 {
   "name": "bestlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "description": "The bestlist.online wrapper, unofficial",
@@ -9,6 +9,17 @@
     "type": "git",
     "url": "https://github.com/andrelucaas/bestlist.git"
   },
+  "keywords": [
+    "discord",
+    "bot",
+    "list",
+    "server",
+    "count",
+    "best",
+    "online",
+    "wrapper",
+    "unofficial"
+  ],
   "scripts": {
     "compile": "tsc",
     "test": "node index.js",
