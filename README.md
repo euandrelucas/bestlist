@@ -1,6 +1,7 @@
 ### 👑 BestListOnline 👑
 
-> A https://bestlist.online wrapper
+- Unofficial wrapper for the [BestList](https://bestlist.online) API.
 
-[]: # Language: typescript
-[]: # Path: index.ts
+### 📚 Documentation 📚
+
+- To acces the [Documentation](http://bestlist.adgdev.me/global.html#BestListWrapper) just [click here](http://bestlist.adgdev.me/global.html#BestListWrapper)

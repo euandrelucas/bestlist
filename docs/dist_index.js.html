@@ -1,10 +1,10 @@
-<!-- start:readme.hbs -->
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>FooDoc</title>
+		<title>dist/index.js</title>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -14,7 +14,7 @@
 		<link type="text/css" rel="stylesheet" href="css/template.min.css">
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"FooDoc","systemSummary":"A Bootstrap and Handlebars based template for JSDoc3.","systemLogo":"","systemColor":"","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"FooDoc Copyright © 2016 The contributors to the JSDoc3 and FooDoc projects.","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -69,27 +69,132 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">readme</span>
-				<h1><span class="name">FooDoc</span></h1>
-				<div class="summary"><p>A Bootstrap and Handlebars based template for JSDoc3.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">dist/index.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-		<section class="readme-section">
-			<article><h3>👑 BestListOnline 👑</h3>
-<ul>
-<li>Unofficial wrapper for the <a href="https://bestlist.online">BestList</a> API.</li>
-</ul>
-<h3>📚 Documentation 📚</h3>
-<ul>
-<li>To acces the <a href="http://bestlist.adgdev.me/global.html#BestListWrapper">Documentation</a> just <a href="http://bestlist.adgdev.me/global.html#BestListWrapper">click here</a></li>
-</ul></article>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">"use strict";
+var tslib_1 = require("tslib");
+var axios_1 = (0, tslib_1.__importDefault)(require("axios"));
+/** Class representing a BestListWrapper. */
+var BestListWrapper = /** @class */ (function () {
+    function BestListWrapper() {
+    }
+    BestListWrapper.prototype.setToken = function (token) {
+        return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
+            return (0, tslib_1.__generator)(this, function (_a) {
+                this.token = token;
+                return [2 /*return*/, true];
+            });
+        });
+    };
+    /**
+    * Get a botlist bot.
+    * @exports client/getBot
+    * @async
+    * @method
+    * @param {String} id - Bot id
+    * @returns {Bot} The bot object
+    */
+    BestListWrapper.prototype.getBot = function (botId) {
+        return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
+            return (0, tslib_1.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.token) {
+                            return [2 /*return*/, console.error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")")];
+                        }
+                        return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/bots/".concat(botId), {
+                                headers: { Authorization: this.token }
+                            }).then(function (res) { return res.data; })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+    * Get a botlist user.
+    * @exports client/getUser
+    * @async
+    * @method
+    * @param {String} id - User id
+    * @returns {User} The user object
+    */
+    BestListWrapper.prototype.getUser = function (userId) {
+        return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
+            return (0, tslib_1.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.token) {
+                            return [2 /*return*/, console.error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")")];
+                        }
+                        return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/".concat(userId), {
+                                headers: { Authorization: this.token }
+                            }).then(function (res) { return res.data; })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+    * Get if the user has already voted for a bot today.
+    * @exports client/getUserVoted
+    * @async
+    * @method
+    * @param {String} id - User id
+    * @returns {User} The user object
+    */
+    BestListWrapper.prototype.getUserVoted = function (userId) {
+        return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
+            return (0, tslib_1.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.token) {
+                            return [2 /*return*/, console.error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")")];
+                        }
+                        return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/voted/".concat(userId), {
+                                headers: { Authorization: this.token }
+                            }).then(function (res) { return res.data; })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+    * Get if the user has already reviewed for a bot today.
+    * @exports client/getUserReviewed
+    * @async
+    * @method
+    * @param {String} id - User id
+    * @returns {User} The user object
+    */
+    BestListWrapper.prototype.getUserReviewed = function (userId) {
+        return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
+            return (0, tslib_1.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.token) {
+                            return [2 /*return*/, console.error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")")];
+                        }
+                        return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/reviewed/".concat(userId), {
+                                headers: { Authorization: this.token }
+                            }).then(function (res) { return res.data; })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return BestListWrapper;
+}());
+module.exports = BestListWrapper;
+</code></pre>
 		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -121,4 +226,4 @@
 	
 </body>
 </html>
-<!-- end:readme.hbs -->
+<!-- end:source.tmpl.hbs -->
