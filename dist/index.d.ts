@@ -2,7 +2,7 @@
 declare class BestListWrapper {
     /**
     * Set the api token.
-    * @exports best_list_wrapper/setToken
+    * @exports client/setToken
     * @async
     * @method
     * @param {string} token - Api token
@@ -13,7 +13,7 @@ declare class BestListWrapper {
     setToken(token: string): Promise<boolean>;
     /**
     * Get a botlist bot.
-    * @exports best_list_wrapper/getBot
+    * @exports client/getBot
     * @async
     * @method
     * @param {String} id - Bot id
@@ -22,7 +22,7 @@ declare class BestListWrapper {
     getBot(botId: string): Promise<any>;
     /**
     * Get a botlist user.
-    * @exports best_list_wrapper/getBot
+    * @exports client/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -31,7 +31,7 @@ declare class BestListWrapper {
     getUser(userId: string): Promise<any>;
     /**
     * Get if the user has already voted for a bot today.
-    * @exports best_list_wrapper/getBot
+    * @exports client/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -40,7 +40,7 @@ declare class BestListWrapper {
     getUserVoted(userId: string): Promise<any>;
     /**
     * Get if the user has already reviewed for a bot today.
-    * @exports best_list_wrapper/getBot
+    * @exports client/getBot
     * @async
     * @method
     * @param {String} id - User id
