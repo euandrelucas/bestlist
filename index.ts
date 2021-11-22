@@ -1,7 +1,6 @@
 import axios from "axios";
 /** Class representing a BestListWrapper. */
 class BestListWrapper {
-    token: any;
     /**
     * Set the api token.
     * @async
@@ -9,6 +8,7 @@ class BestListWrapper {
     * @param {string} token - Api token
     * @returns {True} Sucessfully set token
     */
+    token: any;
     async setToken(token: string) {
         this.token = token;
         return true

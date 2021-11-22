@@ -5,13 +5,6 @@ var axios_1 = (0, tslib_1.__importDefault)(require("axios"));
 var BestListWrapper = /** @class */ (function () {
     function BestListWrapper() {
     }
-    /**
-    * Set the api token.
-    * @async
-    * @method
-    * @param {string} token - Api token
-    * @returns {True} Sucessfully set token
-    */
     BestListWrapper.prototype.setToken = function (token) {
         return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
             return (0, tslib_1.__generator)(this, function (_a) {

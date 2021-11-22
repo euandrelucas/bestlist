@@ -1,6 +1,5 @@
 /** Class representing a BestListWrapper. */
 declare class BestListWrapper {
-    token: any;
     /**
     * Set the api token.
     * @async
@@ -8,6 +7,7 @@ declare class BestListWrapper {
     * @param {string} token - Api token
     * @returns {True} Sucessfully set token
     */
+    token: any;
     setToken(token: string): Promise<boolean>;
     /**
     * Get a botlist bot.
