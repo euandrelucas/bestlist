@@ -22,7 +22,7 @@ declare class BestListWrapper {
     getBot(botId: string): Promise<any>;
     /**
     * Get a botlist user.
-    * @exports client/getBot
+    * @exports client/getUser
     * @async
     * @method
     * @param {String} id - User id
@@ -31,7 +31,7 @@ declare class BestListWrapper {
     getUser(userId: string): Promise<any>;
     /**
     * Get if the user has already voted for a bot today.
-    * @exports client/getBot
+    * @exports client/getUserVoted
     * @async
     * @method
     * @param {String} id - User id
@@ -40,7 +40,7 @@ declare class BestListWrapper {
     getUserVoted(userId: string): Promise<any>;
     /**
     * Get if the user has already reviewed for a bot today.
-    * @exports client/getBot
+    * @exports client/getUserReviewed
     * @async
     * @method
     * @param {String} id - User id

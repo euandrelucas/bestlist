@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "description": "The bestlist.online wrapper, unofficial",
+  "homepage": "https://bestlist.adgdev.me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrelucaas/bestlist.git"
+  },
   "scripts": {
     "compile": "tsc",
     "test": "node index.js",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
-    "docs": "jsdoc -c conf.json"
+    "docs": "jsdoc -c conf.json -t ./node_modules/foodoc/template -R README.md -r ."
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -20,6 +26,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
+    "foodoc": "^0.0.9",
     "jsdoc": "^3.6.7"
   }
 }

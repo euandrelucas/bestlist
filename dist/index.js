@@ -39,7 +39,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get a botlist user.
-    * @exports client/getBot
+    * @exports client/getUser
     * @async
     * @method
     * @param {String} id - User id
@@ -63,7 +63,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get if the user has already voted for a bot today.
-    * @exports client/getBot
+    * @exports client/getUserVoted
     * @async
     * @method
     * @param {String} id - User id
@@ -87,7 +87,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get if the user has already reviewed for a bot today.
-    * @exports client/getBot
+    * @exports client/getUserReviewed
     * @async
     * @method
     * @param {String} id - User id
