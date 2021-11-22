@@ -1,10 +1,11 @@
+/** Class representing a BestListWrapper. */
 declare class BestListWrapper {
     token: any;
     /**
     * Set the api token.
     * @async
     * @method
-    * @param {String} token - Api token
+    * @param {string} token - Api token
     * @returns {True} Sucessfully set token
     */
     setToken(token: string): Promise<boolean>;

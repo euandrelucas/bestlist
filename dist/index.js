@@ -1,6 +1,7 @@
 "use strict";
 var tslib_1 = require("tslib");
 var axios_1 = (0, tslib_1.__importDefault)(require("axios"));
+/** Class representing a BestListWrapper. */
 var BestListWrapper = /** @class */ (function () {
     function BestListWrapper() {
     }
@@ -8,7 +9,7 @@ var BestListWrapper = /** @class */ (function () {
     * Set the api token.
     * @async
     * @method
-    * @param {String} token - Api token
+    * @param {string} token - Api token
     * @returns {True} Sucessfully set token
     */
     BestListWrapper.prototype.setToken = function (token) {
