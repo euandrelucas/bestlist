@@ -3,11 +3,13 @@ import axios from "axios";
 class BestListWrapper {
     /**
     * Set the api token.
+    * @exports best_list_wrapper/setToken
     * @async
     * @method
     * @param {string} token - Api token
     * @returns {True} Sucessfully set token
     */
+    /** this token: bestlist token */
     token: any;
     async setToken(token: string) {
         this.token = token;
@@ -15,6 +17,7 @@ class BestListWrapper {
     }
     /**
     * Get a botlist bot.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - Bot id
@@ -30,6 +33,7 @@ class BestListWrapper {
     }
     /**
     * Get a botlist user.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -45,6 +49,7 @@ class BestListWrapper {
     }
     /**
     * Get if the user has already voted for a bot today.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -60,6 +65,7 @@ class BestListWrapper {
     }
     /**
     * Get if the user has already reviewed for a bot today.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id

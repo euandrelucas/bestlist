@@ -15,6 +15,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get a botlist bot.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - Bot id
@@ -38,6 +39,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get a botlist user.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -61,6 +63,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get if the user has already voted for a bot today.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id
@@ -84,6 +87,7 @@ var BestListWrapper = /** @class */ (function () {
     };
     /**
     * Get if the user has already reviewed for a bot today.
+    * @exports best_list_wrapper/getBot
     * @async
     * @method
     * @param {String} id - User id
