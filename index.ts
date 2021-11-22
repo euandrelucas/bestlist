@@ -13,12 +13,17 @@ class BestListWrapper {
     token: any;
     async setToken(token: string) {
         this.token = token;
-        res = axios.get('https://bestlist.online/api/bots/')
-        if(res.status != 200) {
-          throw new Error('[INVALID_TOKEN], Token is invalid')
-        }else{
-         return true
-       }
+        axios.get('https://bestlist.online/api/bots/', {
+            headers: { Authorization: this.token }
+        }).then((res) => {
+            if(res.status != 200) {
+                throw new Error('Invalid token, set a token with: <client>.setToken(\"bestlist token here\")')
+              } else {
+               return true
+             }
+        }).catch((e) => {
+            throw new Error('Invalid token, set a token with: <client>.setToken(\"bestlist token here\")')
+        })
     }
     /**
     * Get a botlist bot.
@@ -30,7 +35,7 @@ class BestListWrapper {
     */
     async getBot(botId: string) {
         if (!this.token) {
-            return console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
+            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
         }
         return await axios.get(`https://bestlist.online/api/bots/${botId}`, {
             headers: { Authorization: this.token }
@@ -46,7 +51,7 @@ class BestListWrapper {
     */
     async getUser(userId: string) {
         if (!this.token) {
-            return console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
+            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
         }
         return await axios.get(`https://bestlist.online/api/users/${userId}`, {
             headers: { Authorization: this.token }
@@ -62,7 +67,7 @@ class BestListWrapper {
     */
     async getUserVoted(userId: string) {
         if (!this.token) {
-            return console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
+            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
         }
         return await axios.get(`https://bestlist.online/api/users/voted/${userId}`, {
             headers: { Authorization: this.token }
@@ -78,7 +83,7 @@ class BestListWrapper {
     */
     async getUserReviewed(userId: string) {
         if (!this.token) {
-            return console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
+            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
         }
         return await axios.get(`https://bestlist.online/api/users/reviewed/${userId}`, {
             headers: { Authorization: this.token }

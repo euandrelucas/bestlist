@@ -9,7 +9,19 @@ var BestListWrapper = /** @class */ (function () {
         return (0, tslib_1.__awaiter)(this, void 0, void 0, function () {
             return (0, tslib_1.__generator)(this, function (_a) {
                 this.token = token;
-                return [2 /*return*/, true];
+                axios_1.default.get('https://bestlist.online/api/bots/', {
+                    headers: { Authorization: this.token }
+                }).then(function (res) {
+                    if (res.status != 200) {
+                        throw new Error('Invalid token, set a token with: <client>.setToken(\"bestlist token here\")');
+                    }
+                    else {
+                        return true;
+                    }
+                }).catch(function (e) {
+                    throw new Error('Invalid token, set a token with: <client>.setToken(\"bestlist token here\")');
+                });
+                return [2 /*return*/];
             });
         });
     };
@@ -27,7 +39,7 @@ var BestListWrapper = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!this.token) {
-                            return [2 /*return*/, console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")")];
+                            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
                         }
                         return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/bots/".concat(botId), {
                                 headers: { Authorization: this.token }
@@ -51,7 +63,7 @@ var BestListWrapper = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!this.token) {
-                            return [2 /*return*/, console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")")];
+                            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
                         }
                         return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/".concat(userId), {
                                 headers: { Authorization: this.token }
@@ -75,7 +87,7 @@ var BestListWrapper = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!this.token) {
-                            return [2 /*return*/, console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")")];
+                            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
                         }
                         return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/voted/".concat(userId), {
                                 headers: { Authorization: this.token }
@@ -99,7 +111,7 @@ var BestListWrapper = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!this.token) {
-                            return [2 /*return*/, console.error("No token set, set a token with: <client>.setToken(\"bestlist token here\")")];
+                            throw new Error("No token set, set a token with: <client>.setToken(\"bestlist token here\")");
                         }
                         return [4 /*yield*/, axios_1.default.get("https://bestlist.online/api/users/reviewed/".concat(userId), {
                                 headers: { Authorization: this.token }

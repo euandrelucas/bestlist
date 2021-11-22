@@ -10,7 +10,7 @@ declare class BestListWrapper {
     */
     /** this token: bestlist token */
     token: any;
-    setToken(token: string): Promise<boolean>;
+    setToken(token: string): Promise<void>;
     /**
     * Get a botlist bot.
     * @exports client/getBot
