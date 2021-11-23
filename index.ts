@@ -12,6 +12,7 @@ class BestListWrapper {
     token: any;
     async setToken(token: string) {
         this.token = token;
+        if(!this.token) throw new Error('Provide a token')
         axios.get('https://bestlist.online/api/bots/', {
             headers: { Authorization: this.token }
         }).then((res) => {
