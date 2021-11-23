@@ -1,5 +1,4 @@
 import axios from "axios";
-/** Class representing a BestListWrapper. */
 class BestListWrapper {
     /**
     * Set the api token.

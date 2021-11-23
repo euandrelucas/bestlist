@@ -1,4 +1,3 @@
-/** Class representing a BestListWrapper. */
 declare class BestListWrapper {
     /**
     * Set the api token.

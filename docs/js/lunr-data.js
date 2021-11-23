@@ -52,26 +52,9 @@ window.lunrData = {
         "global.html": [
           "document",
           "global"
-        ],
-        "list_class.html": [
-          "class",
-          "document",
-          "list",
-          "list:class"
-        ],
-        "BestListWrapper.html": [
-          "bestlistwrapp",
-          "class",
-          "repres"
-        ],
-        "BestListWrapper.html#token": [
-          "bestlist",
-          "bestlistwrapper#token",
-          "member",
-          "token"
         ]
       },
-      "length": 5
+      "length": 2
     },
     "tokenStore": {
       "root": {
@@ -111,81 +94,6 @@ window.lunrData = {
                             "index.html": {
                               "ref": "index.html",
                               "tf": 14
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "s": {
-                      "docs": {},
-                      "t": {
-                        "docs": {
-                          "BestListWrapper.html#token": {
-                            "ref": "BestListWrapper.html#token",
-                            "tf": 16.666666666666664
-                          }
-                        },
-                        "w": {
-                          "docs": {},
-                          "r": {
-                            "docs": {},
-                            "a": {
-                              "docs": {},
-                              "p": {
-                                "docs": {},
-                                "p": {
-                                  "docs": {
-                                    "BestListWrapper.html": {
-                                      "ref": "BestListWrapper.html",
-                                      "tf": 1916.6666666666667
-                                    }
-                                  },
-                                  "e": {
-                                    "docs": {},
-                                    "r": {
-                                      "docs": {},
-                                      "#": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "k": {
-                                              "docs": {},
-                                              "e": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {
-                                                    "BestListWrapper.html#token": {
-                                                      "ref": "BestListWrapper.html#token",
-                                                      "tf": 1150
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
                             }
                           }
                         }
@@ -312,23 +220,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "p": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "s": {
-                    "docs": {
-                      "BestListWrapper.html": {
-                        "ref": "BestListWrapper.html",
-                        "tf": 16.666666666666664
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
         },
@@ -356,23 +247,6 @@ window.lunrData = {
                 }
               }
             }
-          },
-          "o": {
-            "docs": {},
-            "k": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "n": {
-                  "docs": {
-                    "BestListWrapper.html#token": {
-                      "ref": "BestListWrapper.html#token",
-                      "tf": 783.3333333333334
-                    }
-                  }
-                }
-              }
-            }
           }
         },
         "d": {
@@ -393,10 +267,6 @@ window.lunrData = {
                         "docs": {
                           "global.html": {
                             "ref": "global.html",
-                            "tf": 35
-                          },
-                          "list_class.html": {
-                            "ref": "list_class.html",
                             "tf": 35
                           }
                         }
@@ -430,117 +300,21 @@ window.lunrData = {
               }
             }
           }
-        },
-        "c": {
-          "docs": {},
-          "l": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "s": {
-                  "docs": {
-                    "list_class.html": {
-                      "ref": "list_class.html",
-                      "tf": 635
-                    },
-                    "BestListWrapper.html": {
-                      "ref": "BestListWrapper.html",
-                      "tf": 126.66666666666666
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "l": {
-          "docs": {},
-          "i": {
-            "docs": {},
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "list_class.html": {
-                    "ref": "list_class.html",
-                    "tf": 110
-                  }
-                },
-                ":": {
-                  "docs": {},
-                  "c": {
-                    "docs": {},
-                    "l": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "s": {
-                            "docs": {
-                              "list_class.html": {
-                                "ref": "list_class.html",
-                                "tf": 1300
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "m": {
-          "docs": {},
-          "e": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "BestListWrapper.html#token": {
-                        "ref": "BestListWrapper.html#token",
-                        "tf": 110
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       },
-      "length": 36
+      "length": 10
     },
     "corpusTokens": [
       "base",
-      "bestlist",
-      "bestlistwrapp",
-      "bestlistwrapper#token",
       "bootstrap",
-      "class",
       "document",
       "foodoc",
       "global",
       "handlebar",
       "index",
       "jsdoc3",
-      "list",
-      "list:class",
-      "member",
       "readm",
-      "repres",
-      "templat",
-      "token"
+      "templat"
     ],
     "pipeline": [
       "trimmer",
@@ -570,38 +344,6 @@ window.lunrData = {
       "summary": "All documented globals.",
       "description": "",
       "body": ""
-    },
-    "list_class.html": {
-      "id": "list_class.html",
-      "kind": "list",
-      "title": "Classes",
-      "longname": "list:class",
-      "name": "Classes",
-      "tags": "list:class",
-      "summary": "All documented classes.",
-      "description": "",
-      "body": ""
-    },
-    "BestListWrapper.html": {
-      "id": "BestListWrapper.html",
-      "kind": "class",
-      "title": "BestListWrapper",
-      "longname": "BestListWrapper",
-      "name": "BestListWrapper",
-      "tags": "BestListWrapper",
-      "summary": "",
-      "description": "Class representing a BestListWrapper.",
-      "body": ""
-    },
-    "BestListWrapper.html#token": {
-      "id": "BestListWrapper.html#token",
-      "kind": "member",
-      "title": "token",
-      "longname": "BestListWrapper#token",
-      "name": "token",
-      "tags": "BestListWrapper#token token",
-      "summary": "",
-      "description": "this token: bestlist token"
     }
   }
 };

@@ -1,7 +1,6 @@
 "use strict";
 const tslib_1 = require("tslib");
 const axios_1 = (0, tslib_1.__importDefault)(require("axios"));
-/** Class representing a BestListWrapper. */
 class BestListWrapper {
     /**
     * Set the api token.
