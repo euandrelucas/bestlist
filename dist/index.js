@@ -1,6 +1,8 @@
 "use strict";
-const tslib_1 = require("tslib");
-const axios_1 = (0, tslib_1.__importDefault)(require("axios"));
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+const axios_1 = __importDefault(require("axios"));
 class BestListWrapper {
     /**
     * Set the api token.
@@ -14,7 +16,9 @@ class BestListWrapper {
     token;
     async setToken(token) {
         this.token = token;
-        axios_1.default.get('https://bestlist.online/api/bots/', {
+        if (!this.token)
+            throw new Error('Provide a token');
+        axios_1.default.get('https://bestlist.online/api/bots/880173509077266483', {
             headers: { Authorization: this.token }
         }).then((res) => {
             if (res.status != 200) {

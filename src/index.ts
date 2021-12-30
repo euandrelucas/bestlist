@@ -1,4 +1,5 @@
 import axios from "axios";
+
 class BestListWrapper {
     /**
     * Set the api token.
@@ -13,7 +14,7 @@ class BestListWrapper {
     async setToken(token: string) {
         this.token = token;
         if(!this.token) throw new Error('Provide a token')
-        axios.get('https://bestlist.online/api/bots/', {
+        axios.get('https://bestlist.online/api/bots/880173509077266483', {
             headers: { Authorization: this.token }
         }).then((res) => {
             if(res.status != 200) {
