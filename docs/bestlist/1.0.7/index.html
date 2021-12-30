@@ -31,7 +31,7 @@
 
 
     <title>
-      index.js
+      Home
     </title>
 
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
     <link type="text/css" rel="stylesheet" href="styles/third-party/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/reset.css">
     <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-base.css">
-    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-dark.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-light.css">
     
     <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     style="display:none">
@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="4279664" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#client/getBot">client/getBot</a></li><li class="accordion-list" id=""><a href="global.html#client/getUser">client/getUser</a></li><li class="accordion-list" id=""><a href="global.html#client/getUserReviewed">client/getUserReviewed</a></li><li class="accordion-list" id=""><a href="global.html#client/getUserVoted">client/getUserVoted</a></li></ul> </div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="5884462" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#client/getBot">client/getBot</a></li><li class="accordion-list" id=""><a href="global.html#client/getUser">client/getUser</a></li><li class="accordion-list" id=""><a href="global.html#client/getUserReviewed">client/getUserReviewed</a></li><li class="accordion-list" id=""><a href="global.html#client/getUserVoted">client/getUserVoted</a></li></ul> </div>
       
 
     </nav>
@@ -97,120 +97,36 @@
 
     <div id="main" class="main-content">
       
-      <h1 id='page-title' class="page-title">
-        index.js
-      </h1>
-      
 
       
 
 
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>"use strict";
-var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
-    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
-};
-const axios_1 = __importDefault(require("axios"));
-class BestListWrapper {
-    /**
-    * Set the api token.
-    * @exports client/setToken
-    * @async
-    * @method
-    * @param {string} token - Api token
-    * @returns {True} Sucessfully set token
-    */
-    /** this token: bestlist token */
-    token;
-    async setToken(token) {
-        this.token = token;
-        if (!this.token)
-            throw new Error('Provide a token');
-        axios_1.default.get('https://bestlist.online/api/bots/880173509077266483', {
-            headers: { Authorization: this.token }
-        }).then((res) => {
-            if (res.status != 200) {
-                throw new Error('Invalid token, set a token with: &lt;client>.setToken(\"bestlist token here\")');
-            }
-            else {
-                return true;
-            }
-        }).catch((e) => {
-            throw new Error('Invalid token, set a token with: &lt;client>.setToken(\"bestlist token here\")');
-        });
-    }
-    /**
-    * Get a botlist bot.
-    * @exports client/getBot
-    * @async
-    * @method
-    * @param {String} id - Bot id
-    * @returns {Bot} The bot object
-    */
-    async getBot(botId) {
-        if (!this.token) {
-            throw new Error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")");
-        }
-        return await axios_1.default.get(`https://bestlist.online/api/bots/${botId}`, {
-            headers: { Authorization: this.token }
-        }).then(res => res.data);
-    }
-    /**
-    * Get a botlist user.
-    * @exports client/getUser
-    * @async
-    * @method
-    * @param {String} id - User id
-    * @returns {User} The user object
-    */
-    async getUser(userId) {
-        if (!this.token) {
-            throw new Error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")");
-        }
-        return await axios_1.default.get(`https://bestlist.online/api/users/${userId}`, {
-            headers: { Authorization: this.token }
-        }).then(res => res.data);
-    }
-    /**
-    * Get if the user has already voted for a bot today.
-    * @exports client/getUserVoted
-    * @async
-    * @method
-    * @param {String} id - User id
-    * @returns {User} The user object
-    */
-    async getUserVoted(userId) {
-        if (!this.token) {
-            throw new Error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")");
-        }
-        return await axios_1.default.get(`https://bestlist.online/api/users/voted/${userId}`, {
-            headers: { Authorization: this.token }
-        }).then(res => res.data);
-    }
-    /**
-    * Get if the user has already reviewed for a bot today.
-    * @exports client/getUserReviewed
-    * @async
-    * @method
-    * @param {String} id - User id
-    * @returns {User} The user object
-    */
-    async getUserReviewed(userId) {
-        if (!this.token) {
-            throw new Error("No token set, set a token with: &lt;client>.setToken(\"bestlist token here\")");
-        }
-        return await axios_1.default.get(`https://bestlist.online/api/users/reviewed/${userId}`, {
-            headers: { Authorization: this.token }
-        }).then(res => res.data);
-    }
-}
-module.exports = BestListWrapper;
-</code></pre>
-        </article>
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h3>👑 BestListOnline 👑</h3>
+<ul>
+<li>Unofficial wrapper for the <a href="https://bestlist.online">BestList</a> API.</li>
+</ul>
+<h3>📚 Documentation 📚</h3>
+<ul>
+<li>To acces the <a href="http://bestlist.js.org/global.html#BestListWrapper">Documentation</a> just <a href="http://bestlist.js.org/global.html#BestListWrapper">click here</a></li>
+</ul></article>
     </section>
+
+
 
 
 
