@@ -1,10 +1,10 @@
 {
   "name": "bestlist",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "license": "MIT",
   "description": "The bestlist.online wrapper, unofficial",
-  "homepage": "https://bestlist.adgdev.me",
+  "homepage": "https://bestlist.js.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/andrelucaas/bestlist.git"
