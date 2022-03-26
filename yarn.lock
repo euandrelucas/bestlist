@@ -175,10 +175,10 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-clean-jsdoc-theme@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/clean-jsdoc-theme/-/clean-jsdoc-theme-3.3.1.tgz#fedf8111519773101d6b5610ac6a43ba19ca91ca"
-  integrity sha512-e2P5PB1YcRpWto5pNgG7CLIlMLuEF+UGCf5CPYNvMsqw5or30VQFITWKfBuKZzD98Q9H0wW2n5aqV6CuT2FhGQ==
+clean-jsdoc-theme@3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/clean-jsdoc-theme/-/clean-jsdoc-theme-3.3.4.tgz#4ea0389caf96bef302175f8f56d9a2d7afb6c1dd"
+  integrity sha512-pLamE9eaVce2KHJEaRUHqqPTTaqfiw6LGpkvbqg4M+EwSITy19chLVhH5DVrpyQyebz6G+SiBMdZ1JwoecNDuw==
   dependencies:
     fs-extra "^9.1.0"
 
